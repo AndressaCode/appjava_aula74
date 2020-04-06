@@ -26,22 +26,21 @@ public class Program {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
                 
-        System.out.println("Enter product data: ");
+        System.out.println("-=Product Data=-");
+        System.out.printf("%n");
         System.out.print("Name: ");
         String name = sc.nextLine();
         System.out.print("Price: ");
         double price = sc.nextDouble();
-        System.out.print("Quantity in stock: ");
-        int quantity = sc.nextInt();
         
-        Product product = new Product(name, price, quantity);
+        Product product = new Product(name, price);
         
         System.out.print("Product data: " + product);
         
         System.out.printf("%n%n");
         
         System.out.print("Number of products to be added in the stock: ");
-        quantity = sc.nextInt();
+        int quantity = sc.nextInt();
         product.addProduct(quantity);
         
         System.out.print("Updated data: " + product);
